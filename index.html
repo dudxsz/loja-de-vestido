@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de vestidos de festa </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Nossa Loja de vestidos de festa</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="#" onclick="abrirCarrinho()">Carrinho</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Produtos em Destaque</h2>
+            <div class="produto">
+                <img src="img/vestido1.jpg" alt="vestido1">
+                <h3>vestido azul marinho com fenda</h3>
+                <p>R$150,00</p>
+                <button data-id="1" class="addCar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/vestido2.jpg" alt="vestido 2" class="imagem-pequena">
+                <h3>vestido azul claro de cetim</h3>
+                <p>R$200,00</p>
+                <button data-id="2" class="addCar">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Loja de vestidos </p>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div id="carrinho-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCarrinho()">×</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="carrinho-itens">
+                <!-- Itens do carrinho serão inseridos aqui pelo JavaScript -->
+            </div>
+            <div id="carrinho-total">
+                <!-- Total do carrinho será inserido aqui pelo JavaScript -->
+            </div>
+            <!-- Botão de limpar o carrinho -->
+            <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <!-- Botão de confirmar compra -->
+            <button id="confirmar-compra">Confirmar Compra</button>
+        </div>
+    </div>
+    <!-- Mensagem de Confirmação -->
+    <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+        Produto confirmado no carrinho!
+    </div>
+    <!-- Modal do Carrinho -->
+<div id="carrinho-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharCarrinho()">×</span>
+        <h2>Carrinho de Compras</h2>
+        <div id="carrinho-itens">
+            <!-- Itens do carrinho serão inseridos aqui pelo JavaScript -->
+        </div>
+        <div id="carrinho-total">
+            <!-- Total do carrinho será inserido aqui pelo JavaScript -->
+        </div>
+        <!-- Botões de limpar carrinho e confirmar compra -->
+        <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+        <button id="confirmar-compra">Confirmar Compra</button>
+        <!-- Botão para fechar o modal após confirmar a compra -->
+        <button id="fechar-modal" style="display:none;" onclick="fecharCarrinho()">Fechar</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
